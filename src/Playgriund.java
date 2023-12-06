@@ -53,7 +53,7 @@ public class Playgriund {
         tampilkanDaftarNilai(nimArray, namaArray, us1Array, us2Array, uasArray, totalNilArray, finalNilArray);
 
         // Mengurutkan data berdasarkan nilai total
-        bubbleSortDescending(totalNilArray, nimArray, namaArray, us1Array, us2Array, uasArray, finalNilArray);
+        pengurutBubbleSort(totalNilArray, nimArray, namaArray, us1Array, us2Array, uasArray, finalNilArray);
 
         // Menampilkan daftar nilai mahasiswa urut terbaik
         System.out.println("Daftar Nilai Mahasiswa TI USD Urut Terbaik");
@@ -97,13 +97,13 @@ public class Playgriund {
     }
 
     // Fungsi untuk mengurutkan data dengan algoritma Bubble Sort (descending)
-    private static void bubbleSortDescending(double[] totalNil, String[] nim, String[] nama, double[] us1, double[] us2,
+    private static void pengurutBubbleSort(double[] totalNil, String[] nim, String[] nama, double[] us1, double[] us2,
                                              double[] uas, char[] finalNil) {
         int n = totalNil.length;
-        boolean adaPenukaran;
+        boolean ditukar;
 
         do {
-            adaPenukaran = false;
+            ditukar = false;
 
             for (int i = 0; i < n - 1; i++) {
                 if (totalNil[i] < totalNil[i + 1]) {
@@ -116,10 +116,10 @@ public class Playgriund {
                     tukarElemen(uas, i, i + 1);
                     tukarElemen(finalNil, i, i + 1);
 
-                    adaPenukaran = true;
+                    ditukar = true;
                 }
             }
-        } while (adaPenukaran);
+        } while (ditukar);
     }
 
     // Fungsi untuk menukar elemen dalam array
