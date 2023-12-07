@@ -11,7 +11,7 @@ public class Soal5_Modul11 {
         //Membaca 5 data bulat
         for(int i = 0; i <=4; i++){
             System.out.print("Data ke "+(i+1)+" : ");
-            skor[i] = aria.nextInt();
+            skor[i] = aria.nextDouble();
         }
         System.arraycopy(skor, 0, cadangan, 0, skor.length);
 
